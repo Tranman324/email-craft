@@ -1,0 +1,76 @@
+<!--
+  email-craft starter: BOLD MONO archetype, drenched colour strategy.
+  The surface IS the colour. Few words, huge type, one CTA.
+  Every brand value, URL, and line of copy is a placeholder. Replace all of it.
+  Tokens: drench #1D3FD8 (cobalt), light ink #F2F0FF, footer ground #0E1E6B.
+  Compile: npx mjml bold-mono.mjml -o bold-mono.html --config.minify=true --config.validationLevel=strict
+-->
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-title>Blue. The new colorway drops tomorrow at 9am.</mj-title>
+    <mj-preview>Limited to 200 pairs. Set a reminder before they're gone.</mj-preview>
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <mj-font name="Archivo Black" href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;display=swap" />
+
+    <mj-attributes>
+      <mj-all font-family="'Archivo Black', 'Arial Black', Arial, sans-serif" />
+      <mj-section padding="0" />
+      <mj-text color="#F2F0FF" font-size="18px" line-height="26px" padding="0 40px 24px" align="center" />
+      <mj-image padding="0" />
+      <mj-button background-color="#F2F0FF" color="#1D3FD8" font-size="17px" border-radius="999px" inner-padding="18px 36px" padding="8px 40px 56px" />
+      <mj-class name="mega" font-size="96px" line-height="96px" letter-spacing="-3px" padding="48px 40px 16px" />
+      <mj-class name="foot" font-family="Arial, Helvetica, sans-serif" font-size="12px" line-height="19px" color="#C9CCF5" padding="0 40px 8px" />
+    </mj-attributes>
+
+    <mj-html-attributes>
+      <mj-selector path=".email-h1 div">
+        <mj-html-attribute name="role">heading</mj-html-attribute>
+        <mj-html-attribute name="aria-level">1</mj-html-attribute>
+      </mj-selector>
+    </mj-html-attributes>
+  </mj-head>
+
+  <mj-body background-color="#1D3FD8" width="600px">
+
+    <mj-section padding="32px 0 0">
+      <mj-column>
+        <mj-image src="https://placehold.co/240x60/1D3FD8/F2F0FF/png?text=LOGO" alt="Stride Co." width="120px" href="https://example.com" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="mega" css-class="email-h1">Blue.</mj-text>
+        <mj-text>The new colorway. Limited to 200. Tomorrow, 9am.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Product on the same blue: the photo continues the surface. -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://placehold.co/1200x900/1D3FD8/F2F0FF/png?text=PRODUCT+ON+BLUE" alt="The Stride runner in cobalt blue, side profile on a matching blue backdrop" width="600px" padding="0 0 32px" />
+        <mj-button href="https://example.com/blue/reminder">Set a reminder for the drop</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#0E1E6B" padding="32px 0 40px">
+      <mj-column>
+        <mj-social mode="horizontal" align="center" icon-size="24px" padding="0 40px 16px" font-size="0px">
+          <mj-social-element name="instagram-noshare" href="https://instagram.com/example" alt="Stride on Instagram" background-color="#1D3FD8"></mj-social-element>
+          <mj-social-element name="x-noshare" href="https://x.com/example" alt="Stride on X" background-color="#1D3FD8"></mj-social-element>
+        </mj-social>
+        <mj-text mj-class="foot" align="center">Stride Co., 48 Mill Street, Portland, ME 04101</mj-text>
+        <mj-text mj-class="foot" align="center">
+          You signed up for drop alerts at example.com.
+          <a href="{{unsubscribe_url}}" style="color:#F2F0FF;text-decoration:underline;">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

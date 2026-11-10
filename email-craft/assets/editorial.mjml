@@ -1,0 +1,117 @@
+<!--
+  email-craft starter: EDITORIAL archetype, committed colour strategy.
+  Every brand value, URL, and line of copy is a placeholder. Replace all of it.
+  Tokens: primary #1F3B2D (deep forest), paper #F4F1EA, ink #22231F, muted #5E625A.
+  Compile: npx mjml editorial.mjml -o editorial.html --config.minify=true --config.validationLevel=strict
+-->
+<mjml lang="en" dir="ltr">
+  <mj-head>
+    <mj-title>Northbound Journal: running through the worst of winter</mj-title>
+    <mj-preview>What we wear when the sleet goes sideways, and the one layer we never skip.</mj-preview>
+
+    <mj-raw>
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+
+    <mj-font name="Newsreader" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&amp;display=swap" />
+
+    <mj-attributes>
+      <mj-all font-family="Newsreader, Georgia, 'Times New Roman', serif" />
+      <mj-section padding="0" />
+      <mj-text color="#22231F" font-size="17px" line-height="27px" padding="0 40px 20px" />
+      <mj-image padding="0" />
+      <mj-button background-color="#1F3B2D" color="#F4F1EA" font-size="16px" font-weight="600" border-radius="2px" inner-padding="16px 28px" padding="4px 40px 40px" align="left" />
+      <mj-class name="kicker" font-family="Arial, Helvetica, sans-serif" font-size="12px" line-height="18px" letter-spacing="2px" text-transform="uppercase" color="#5E625A" padding="32px 40px 12px" />
+      <mj-class name="h1" font-size="36px" line-height="42px" font-weight="600" color="#1F3B2D" padding="0 40px 20px" />
+      <mj-class name="h2" font-size="22px" line-height="30px" font-weight="600" color="#1F3B2D" padding="8px 40px 8px" />
+      <mj-class name="foot" font-family="Arial, Helvetica, sans-serif" font-size="12px" line-height="19px" color="#5E625A" padding="0 40px 8px" />
+    </mj-attributes>
+
+    <mj-html-attributes>
+      <mj-selector path=".email-h1 div">
+        <mj-html-attribute name="role">heading</mj-html-attribute>
+        <mj-html-attribute name="aria-level">1</mj-html-attribute>
+      </mj-selector>
+      <mj-selector path=".email-h2 div">
+        <mj-html-attribute name="role">heading</mj-html-attribute>
+        <mj-html-attribute name="aria-level">2</mj-html-attribute>
+      </mj-selector>
+    </mj-html-attributes>
+
+    <mj-style inline="inline">
+      .logo-dark { display: none !important; }
+    </mj-style>
+    <mj-style>
+      @media (prefers-color-scheme: dark) {
+        .logo-light { display: none !important; }
+        .logo-dark { display: block !important; }
+        .dm-bg, .dm-bg > div { background-color: #141613 !important; }
+        .dm-text div { color: #ECE8DE !important; }
+        .dm-muted div { color: #B4B7AE !important; }
+        .dm-link { color: #ECE8DE !important; }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#F4F1EA" width="600px" css-class="dm-bg">
+
+    <!-- Header: compact, logo left. Hero hugs it. -->
+    <mj-section padding="28px 0 16px">
+      <mj-column>
+        <mj-image css-class="logo-light" src="https://placehold.co/280x64/png?text=LOGO" alt="Northbound Supply" width="140px" align="left" padding="0 40px" href="https://example.com" />
+        <mj-image css-class="logo-dark" src="https://placehold.co/280x64/1F3B2D/F4F1EA/png?text=LOGO" alt="Northbound Supply" width="140px" align="left" padding="0 40px" href="https://example.com" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero: full bleed, sells the moment, not the product. -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://placehold.co/1200x800/png?text=HERO+PHOTO" alt="A lone runner on a frozen ridge trail under heavy grey cloud" width="600px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="kicker" css-class="dm-muted">The Journal &middot; Issue 18</mj-text>
+        <mj-text mj-class="h1" css-class="email-h1 dm-text">When the weather wins, you don't.</mj-text>
+        <mj-text css-class="dm-text">
+          Horizontal sleet has a way of sorting out who actually wanted to run today. We spent January on the ridge above town, logging the mornings nobody else would, and came back with three opinions about what keeps you out there.
+        </mj-text>
+        <mj-text css-class="dm-text">
+          The short version: wind matters more than cold, your hands quit before your legs do, and the shell you pack is worth more than the one you meant to buy.
+        </mj-text>
+        <mj-button href="https://example.com/winter-kit">See the winter kit</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Secondary story: photo above copy, no card chrome. -->
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://placehold.co/1040x640/png?text=STORY+PHOTO" alt="Close-up of a gloved hand gripping a frosted trail marker" width="520px" padding="0 40px 20px" />
+        <mj-text mj-class="h2" css-class="email-h2 dm-text">The layer we never skip</mj-text>
+        <mj-text css-class="dm-text" padding="0 40px 40px">
+          A wind shirt weighs less than a banana and buys you twenty degrees of comfort. It lives in a pocket until the ridge, and it is the first thing we reach for every single time.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer: mission, socials, address, unsubscribe. In that order. -->
+    <mj-section padding="32px 0 40px" border-top="1px solid #D9D4C7">
+      <mj-column>
+        <mj-text mj-class="foot" css-class="dm-muted" font-family="Newsreader, Georgia, serif" font-size="15px" color="#1F3B2D">Made for people who run anyway.</mj-text>
+        <mj-social mode="horizontal" align="left" icon-size="24px" padding="8px 34px 16px" font-size="0px">
+          <mj-social-element name="instagram-noshare" href="https://instagram.com/example" alt="Northbound on Instagram" background-color="#1F3B2D"></mj-social-element>
+          <mj-social-element name="facebook-noshare" href="https://facebook.com/example" alt="Northbound on Facebook" background-color="#1F3B2D"></mj-social-element>
+          <mj-social-element name="youtube-noshare" href="https://youtube.com/@example" alt="Northbound on YouTube" background-color="#1F3B2D"></mj-social-element>
+        </mj-social>
+        <mj-text mj-class="foot" css-class="dm-muted">Northbound Supply, 120 Ridge Road, Suite 4, Bend, OR 97701</mj-text>
+        <mj-text mj-class="foot" css-class="dm-muted">
+          You're getting this because you joined the Journal at example.com.
+          <a class="dm-link" href="{{unsubscribe_url}}" style="color:#1F3B2D;text-decoration:underline;">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
